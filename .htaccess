@@ -1,0 +1,25 @@
+php_flag register_globals on
+php_flag register_long_arrays on
+ServerSignature Off
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+</files>
+
+RewriteEngine on
+
+ErrorDocument 403 /error/403
+ErrorDocument 404 /error/404
+ErrorDocument 500 /error/500
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+RedirectMatch 404 ^/module.*$

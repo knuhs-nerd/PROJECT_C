@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>NeRd - PW Change</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta property="og:locale" content="ko_KR">
+        <link rel="stylesheet" href="/src/css/layout.css">
+        <link rel="stylesheet" href="/src/css/pw_change.css">
+        <script src="/src/js/xhr.js"></script>
+        <script src="/src/js/encrypt.js"></script>
+        <script src="/src/js/pw_change.js"></script>
+    </head>
+    <body>
+        <?php $col = 'none'; include '../module/header_img.php'; ?>
+        <div class="container">
+            <input class="text" type="password" placeholder="기존 비밀번호">
+            <script>
+                document.querySelector(".container").addEventListener("keydown", fe);
+            </script>
+        </div>
+    </body>
+</html>

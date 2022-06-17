@@ -1,0 +1,23 @@
+:root { background-color: rgba(230, 200, 255, 0.75); }
+
+input.text {
+    width: 50%;
+    height: 5em;
+    border: none;
+    margin-top: 15em;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 1em;
+    text-align: center;
+    background-color: rgb(251, 252, 253);
+}
+
+input.text:focus {
+    outline: none;
+}
+
+input.text::-webkit-outer-spin-button,
+input.text::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
